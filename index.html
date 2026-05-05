@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- META TAGS X Player Card -->
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:title" content="Sophia 🔥" />
+  <meta name="twitter:description" content="Contenu exclusif • Lien vers mon profil complet" />
+  <meta name="twitter:image" content="https://sophi-ai.github.io/vid2/thumbnail.jpg" />
+  <meta name="twitter:player" content="https://sophi-ai.github.io/vid2/container.html" />
+  <meta name="twitter:player:width" content="1280" />
+  <meta name="twitter:player:height" content="720" />
+
+  <!-- Open Graph (pour éviter les warnings) -->
+  <meta property="og:title" content="Sophia 🔥" />
+  <meta property="og:description" content="Contenu exclusif • Lien vers mon profil complet" />
+  <meta property="og:image" content="https://sophi-ai.github.io/vid2/thumbnail.jpg" />
+  <meta property="og:url" content="https://sophi-ai.github.io/vid2/" />
+  <meta property="og:type" content="website" />
+
+  <title>Sophia - Preview Vidéo</title>
+  <style>
+    body { margin:0; padding:0; background:#000; color:white; font-family:sans-serif; text-align:center; overflow:hidden; }
+    .container { max-width:1280px; margin:0 auto; padding:20px; }
+    video { width:100%; max-width:1280px; border-radius:12px; box-shadow:0 10px 30px rgba(255,0,255,0.3); }
+    h1 { margin:30px 0 10px; font-size:28px; }
+    p { font-size:18px; margin:15px 0; }
+    .btn { background:#ff00ff; color:white; padding:18px 50px; font-size:22px; border:none; border-radius:50px; cursor:pointer; margin:20px 0; display:inline-block; text-decoration:none; }
+    .countdown { font-size:22px; color:#ff00ff; margin-top:20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hey ! Voici ma vidéo preview 🔥</h1>
+    
+    <video controls autoplay loop muted playsinline>
+      <source src="ma-video.mp4" type="video/mp4">
+    </video>
+
+    <p>Clique ci-dessous pour aller sur mon profil complet</p>
+    <a href="https://getmysocial.com/tyumadison" class="btn">➜ Aller sur mon GetMySocial</a>
+
+    <div class="countdown">Redirection automatique dans <span id="timer">3</span> secondes...</div>
+  </div>
+
+  <script>
+    let timeLeft = 3;
+    const timerEl = document.getElementById('timer');
+    const countdown = setInterval(() => {
+      timeLeft--;
+      timerEl.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        window.location.href = "https://getmysocial.com/tyumadison";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
